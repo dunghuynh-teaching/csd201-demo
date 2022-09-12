@@ -9,7 +9,7 @@ import com.fptuni.csd201.recursion.VonKnockSnowflake;
 public class Main {
     
     public static void testLinkedList(){
-        System.out.println("Linked List");
+        System.out.println("Linked List - test");
 
         LinkedList list = new LinkedList();
 

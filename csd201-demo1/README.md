@@ -2,8 +2,7 @@
 
 ## Assignment
 [Assignment 1](doc/assignment-01.md)   
-[Assignment 2](doc/assignment-02.md) 
-  
+[Assignment 2](doc/assignment-02.md)   
 
 ## Exercise
 
