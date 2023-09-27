@@ -1,7 +1,5 @@
 package com.fptuni.csd201.lib;
 
-import com.fptuni.csd201.object.Person;
-
 public class Node {
 
     int info;

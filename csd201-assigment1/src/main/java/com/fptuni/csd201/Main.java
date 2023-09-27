@@ -1,7 +1,6 @@
 package com.fptuni.csd201;
 
-import com.fptuni.csd201.bookservice.BookServer;
-import com.fptuni.csd201.bookservice.BookServiceImpl;
+
 import com.fptuni.csd201.curious.Curious;
 import com.fptuni.csd201.curious.FindingPath;
 import com.fptuni.csd201.utils.Turtle;
@@ -10,7 +9,7 @@ import com.fptuni.csd201.lib.LinkedList;
 import com.fptuni.csd201.marsmessenger.MessageReceiverImpl;
 import com.fptuni.csd201.marsmessenger.SpaceShip;
 import com.fptuni.csd201.recursion.VonKnockSnowflake;
-import com.fptuni.csd201.bookservice.BookService;
+
 
 public class Main {
     
@@ -145,19 +144,7 @@ public class Main {
         
     }
     
-    public static void testBookService()
-    {
-        
-        for (int i = 1; i<= 7; i++){
-            BookServer server = new BookServer();
-            BookService service = new BookServiceImpl();
-            
-            server.setService(service);
-            System.out.println("===TEST " + i);
-            server.process(i);
-            
-        }
-    }
+  
     
     public static void main(String[] args) {
 
