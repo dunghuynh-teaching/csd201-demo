@@ -35,7 +35,6 @@ class Main {
                 
         //Display the menu contains a list of possibble choices
         printMenu();
-        
         Scanner sca = new Scanner(System.in);
         int choice = sca.nextInt();
         sca.nextLine();
@@ -44,16 +43,14 @@ class Main {
         File checkfile = new File(fname);
         if(checkfile.exists()) checkfile.delete();
 
-        
-        Writer f = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fname), "UTF-8"));
         BookServer server = new BookServer();
         BookServiceImpl service = new BookServiceImpl();
         
         server.setService(service);
-        server.setFile(f);        
+        server.setFile(fname);        
         server.process(choice);                   
         viewFile(fname);
-        f.close();
+        
         
     }  
     

@@ -5,11 +5,15 @@
 ===true
 ===true
 ===2. showBook 1
+Book{code=TEST, name=Test book, lended=10, quantity=10, price=35.5}
 ===3. showBook 2
+Book{code=TEST, name=Test book, lended=10, quantity=10, price=35.5}
 ===4. countBook
 0
 ===5. printAvailableBook
+Book{code=TEST, name=Test book, lended=10, quantity=10, price=35.5}
 ===6. balancing
 ===countBook
 0
 ===showBook 2
+Book{code=TEST, name=Test book, lended=10, quantity=10, price=35.5}

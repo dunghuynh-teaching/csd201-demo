@@ -1,6 +1,8 @@
 ===1. addBook
 ===2. showBook 1
+Test
 ===3. showBook 2
+Test
 ===4. countBook
 0
 ===5. printAvailableBook
@@ -8,3 +10,4 @@
 ===countBook
 0
 ===showBook 2
+Test

@@ -7,13 +7,13 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void showBook(int method) {
-        
+    public void showBook(int method) {        
+        System.out.println(new Book("TEST","Test book",10,10,35.5));
     }
 
     @Override
     public Book searchBookbyCode(String bookCode) {
-        return null;
+        return new Book("TEST","Test book",10,10,35.5);
     }
 
     @Override
@@ -27,12 +27,13 @@ public class BookServiceImpl implements BookService {
     }
     @Override
     public void printAvailableBook() {
+        System.out.println(new Book("TEST","Test book",10,10,35.5));
     }
     @Override
     public void balancing() {
     }
     @Override
     public Book searchBookbyName(String name) {
-         return null;
+         return new Book("TEST","Test book",10,10,35.5);
     }    
 }

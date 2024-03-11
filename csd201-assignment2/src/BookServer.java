@@ -5,7 +5,10 @@
 
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.Writer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,9 +18,9 @@ import java.util.logging.Logger;
  * @author DUNGHUYNH
  */
 public class BookServer {
-    Writer f;
-    BookService service;
     
+    BookService service;
+    String fname;
     String[] bookNames = {"Don Quixote",
         "Alice's Adventures in Wonderland",
         "The Adventures of Huckleberry Finn",
@@ -523,32 +526,21 @@ public class BookServer {
         this.service = service;
     }
     
-    public void setFile(Writer file){
-        this.f = file;
+    public void setFile(String fname){
+        this.fname = fname;
     }
     
     void print(String s){
-        try {
-            f.write(s + "\n");
-        } catch (IOException ex) {
-            System.err.println("Can not write file");
-        }
+        System.out.print(s + "\n");
+
     }
     
     void print(Book b){
-        try {
-            f.write(b.toString() + "\n");
-        } catch (IOException ex) {
-            System.err.println("Can not write file");
-        }
+        System.out.print(b.toString() + "\n");           
     }
     
     void print(int num){
-        try {
-            f.write(num + "\n");
-        } catch (IOException ex) {
-            System.err.println("Can not write file");
-        }
+        System.out.print(num + "\n");           
     }
     
     void testCase1(){
@@ -878,6 +870,20 @@ public String MD5(String md5) {
     return null;
 }
     public void process(int testcase){
+
+        PrintStream stdout = System.out;
+        File file = new File(fname);
+        //Instantiating the PrintStream class
+
+        try {
+            PrintStream stream = new PrintStream(file);
+            System.setOut(stream);
+        } catch (FileNotFoundException ex) {
+            System.out.println("File is not able to write");
+        }
+
+
+        
         switch (testcase) {
             case 1: testCase1(); break;
             case 2: testCase2(); break;
@@ -887,5 +893,7 @@ public String MD5(String md5) {
             case 6: testCase6(); break;
             case 7: testCase7(); break;          
         }
+        
+        System.setOut(stdout);
     }
 }
