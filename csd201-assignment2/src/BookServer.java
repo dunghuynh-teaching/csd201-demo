@@ -536,7 +536,7 @@ public class BookServer {
     }
     
     void print(Book b){
-        System.out.print(b.toString() + "\n");           
+        System.out.print(b + "\n");           
     }
     
     void print(int num){
